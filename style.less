@@ -1,0 +1,68 @@
+.app-wrapper {
+  #visit-wall, #add-to-visit-wall {
+    .modal-content {
+      padding: 1.5em;
+
+      .visitor {
+        &:nth-child(2n) {
+          background-color: #BDBDBD;
+        }
+      }
+    }
+  }
+  .number-input {
+    width: 17em;
+    font-size: 120%;
+    padding: 0.4em 1em;
+  }
+
+  .start-sort-button {
+    padding: 0.8em 1em;
+    margin: 0em 1em;
+  }
+
+  .numbers-container {
+    margin-top: 3em;
+
+    [class*='number-container-']{
+      transition: transform linear 0.4s;
+      transition-duration: 0.4s;
+
+      .number-wrapper {
+        border-radius: 3px;
+        position: relative;
+        padding: 3.5em 0em;
+        margin: 1em 1em;
+        background-color: #64B5F6;
+        border: 1px solid #1565C0;
+        transition: opacity linear 0.2s;
+        opacity: 0;
+
+        .number {
+          font-size: 150%;
+        }
+
+        .delete-number {
+          cursor: pointer;
+          position: absolute;
+          top: 0.2em;
+          right: 0.2em;
+          font-size: 180%;
+          color: #D32F2F;
+        }
+      }
+
+      &.hightlighted {
+        .number-wrapper {
+          background-color: #1976D2;
+        }
+      }
+
+      &.show-tile {
+        .number-wrapper {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
